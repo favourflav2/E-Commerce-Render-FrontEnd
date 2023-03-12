@@ -20,11 +20,7 @@ export default function Shoppinglist() {
     async function getItems(){
       try{
         setLoading(true)
-        const res = await axios.get(`${process.env.REACT_APP_URL}/products?populate=*`,{
-          headers:{
-            Authorization: 'bearer' + process.env.REACT_APP_API_TOKEN
-          }
-        })
+        const res = await axios.get(`${process.env.REACT_APP_URL}/products?populate=*`)
         setProducts(res.data.data)
         setLoading(false)
         //console.log(res.data.data)

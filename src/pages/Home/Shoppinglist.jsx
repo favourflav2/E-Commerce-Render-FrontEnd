@@ -25,7 +25,6 @@ export default function Shoppinglist() {
             Authorization: 'bearer' + process.env.REACT_APP_API_TOKEN
           }
         })
-        console.log("bearer " + process.env.REACT_APP_API_TOKEN)
         setProducts(res.data.data)
         setLoading(false)
         //console.log(res.data.data)

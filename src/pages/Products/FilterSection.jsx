@@ -39,12 +39,12 @@ export default function FilterSection() {
     valueX: menData,
     loading: menLoading,
     //error: menError,
-  } = useFetch(`/products?populate=*&filters[categories][id]=2&filters[price][$lte]=${value}&sort=price:${radio}`);
+  } = useFetch(`/products?populate=*&filters[categories][id]=1&filters[price][$lte]=${value}&sort=price:${radio}`);
   const {
     valueX: womanData,
     loading: womenLoading,
     //error: womenError,
-  } = useFetch(`/products?populate=*&filters[categories][id]=1&filters[price][$lte]=${value}&sort=price:${radio}`);
+  } = useFetch(`/products?populate=*&filters[categories][id]=2&filters[price][$lte]=${value}&sort=price:${radio}`);
  
   
 // item?.attributes?.price

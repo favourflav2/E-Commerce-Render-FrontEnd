@@ -21,8 +21,8 @@ export default function Product() {
   const { valueX } = useFetch(
     `${process.env.REACT_APP_URL}/products/${id}?populate=*`
   );
-  console.log(valueX)
-  const image = valueX?.attributes?.img?.data?.attributes?.url;
+  
+  //const image = valueX?.attributes?.img?.data?.attributes?.url;
   const valueId = Number(id);
   const cartItem = cart?.find((item) => item.id === valueId);
 
@@ -33,8 +33,8 @@ export default function Product() {
           {/* Image */}
           <Box className="w-full md:mb-0 mb-10">
             <img
-              src=""
-              alt=""
+              src={process.env.REACT_APP_UPLOAD_URL + valueX?.attributes?.img?.data?.attributes?.url}
+              alt="title"
               className=" w-full h-full"
             />
           </Box>

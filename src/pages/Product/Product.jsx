@@ -32,7 +32,7 @@ export default function Product() {
           {/* Image */}
           <Box className="w-full md:mb-0 mb-10">
             <img
-              src={process.env.REACT_APP_UPLOAD_URL + image}
+              src=""
               alt=""
               className=" w-full h-full"
             />

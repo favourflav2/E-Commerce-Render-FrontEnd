@@ -19,7 +19,7 @@ export default function Product() {
   }
 
   const { valueX } = useFetch(
-    `${process.env.REACT_APP_URL}/api/products/${id}?populate=*`
+    `${process.env.REACT_APP_URL}/products/${id}?populate=*`
   );
   const image = valueX?.attributes?.img?.data?.attributes?.url;
   const valueId = Number(id);

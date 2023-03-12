@@ -21,6 +21,7 @@ export default function Product() {
   const { valueX } = useFetch(
     `${process.env.REACT_APP_URL}/products/${id}?populate=*`
   );
+  console.log(valueX)
   const image = valueX?.attributes?.img?.data?.attributes?.url;
   const valueId = Number(id);
   const cartItem = cart?.find((item) => item.id === valueId);

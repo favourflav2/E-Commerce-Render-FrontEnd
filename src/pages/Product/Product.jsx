@@ -14,14 +14,18 @@ export default function Product() {
   const dispatch = useDispatch();
   const [count, setCount] = React.useState(1);
   const [value, setValue] = React.useState("desc");
+  const [dataVal, setDataVal] = React.useState(null)
   function handleChange(e, newValue) {
     setValue(newValue);
   }
 
-  const { valueX } = useFetch(
-    `${process.env.REACT_APP_URL}/products/${id}?populate=*`
-  );
-  console.log(valueX)
+ 
+    const { valueX } = useFetch(
+      `${process.env.REACT_APP_URL}/products/${id}?populate=*`
+    );
+
+  
+  
   
   //const image = valueX?.attributes?.img?.data?.attributes?.url;
   const valueId = Number(id);

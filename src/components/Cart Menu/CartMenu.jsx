@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Modal, Typography } from "@mui/material";
+import { Box, Button, IconButton, Modal, Typography,useMediaQuery } from "@mui/material";
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -42,6 +42,8 @@ export default function CartMenu() {
       console.log(e)
     }
   }
+
+  const isNonMobile = useMediaQuery('(min-width:640px)')
  
   
   return (
@@ -76,7 +78,7 @@ export default function CartMenu() {
                     <img src={process.env.REACT_APP_UPLOAD_URL + item?.attributes?.img?.data?.attributes?.url} alt="" className=" object-contain h-full"/>
                   </Box>
 
-                  <Box className=" flex flex-col justify-center h-[80%] ">
+                  <Box className={isNonMobile ? " flex flex-col justify-center h-[80%] " : " flex flex-col justify-center h-auto "}>
                       <Box className="flex justify-between items-center">
                         <Typography className="text-[14px] font-medium">{item?.attributes?.title}</Typography>
                         <IconButton onClick={()=>dispatch(removeFromCart(item))}>

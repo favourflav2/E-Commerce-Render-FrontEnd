@@ -69,7 +69,7 @@ export default function CartMenu() {
               )}
               {cart?.map((item, index) => (
                 <Box
-                  className="grid grid-cols-[50%_minmax(0,_1fr)] my-7 border-b border-gray-400 h-[200px] sm:h-[275px] md:h-[300px] lg:min-h-[450px]"
+                  className="grid grid-cols-[50%_minmax(0,_1fr)] my-7 border-b border-gray-400 h-auto sm:h-[275px] md:h-[300px] lg:min-h-[450px]"
                   key={index}
                 >
                   <Box className="w-[95%] h-[80%]">

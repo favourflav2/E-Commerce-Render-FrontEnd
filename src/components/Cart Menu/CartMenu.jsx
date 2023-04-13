@@ -74,7 +74,7 @@ export default function CartMenu() {
                   className="grid grid-cols-[50%_minmax(0,_1fr)] my-7 border-b border-gray-400 h-auto sm:h-[275px] md:h-[300px] lg:min-h-[450px]"
                   key={index}
                 >
-                  <Box className="w-[95%] h-[80%]">
+                  <Box className={isNonMobile ? "w-[95%] h-[80%]" : "w-[20px] h-[20px]"}>
                     <img src={process.env.REACT_APP_UPLOAD_URL + item?.attributes?.img?.data?.attributes?.url} alt="" className=" object-contain h-full"/>
                   </Box>
 

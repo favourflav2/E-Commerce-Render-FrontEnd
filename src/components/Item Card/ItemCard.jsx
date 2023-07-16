@@ -23,7 +23,7 @@ export default function ItemCard({ item }) {
       onMouseOver={()=>setHover(true)}
       onMouseOut={()=>setHover(false)}
       >
-        <img src={process.env.REACT_APP_UPLOAD_URL + image} alt="" className={hover?"opacity-70 h-[500px]":"h-[500px]"} onClick={()=>navigate(`/product/${item.id}`)}/>
+        <img src={process.env.REACT_APP_UPLOAD_URL + image} alt="" className={hover?"opacity-70 h-[550px] object-cover ":"object-cover h-[550px]"} onClick={()=>navigate(`/product/${item.id}`)}/>
         <Typography className="mt-3 font-extrabold">{item?.attributes?.category.replace(/([A-Z])/g," $1")
               .replace(/^./,(str) => str.toUpperCase())}</Typography>
         <Typography className="text-[14px]">{item?.attributes?.title}</Typography>
